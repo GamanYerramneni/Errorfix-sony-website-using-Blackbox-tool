@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        background-color: #444;
+        overflow: hidden;
+      }
+      nav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .search-container {
+        float: right;
+      }
+      .search-container input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+      }
+      .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background-color: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+      }
+      .search-container button:hover {
+        background-color: #e6e6e6;
+      }
+      .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+      }
+      .product-card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        text-align: center;
+        background-color: #fff;
+        transition: 0.3s;
+      }
+      .product-card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+      .product-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .product-title {
+        margin: 10px 0;
+        font-size: 24px;
+      }
+      .product-description {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+      footer a:hover {
+        color: #ccc;
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }.slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+      input:checked + .slider {
+        background-color: #2196f3;
+      }
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+      .slider.round:before {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Survey Form</h1>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <div class="search-container">
+        <form action="#">
+          <label for="search">Search</label>
+          <input type="text" id="search" placeholder="Search Products" name="search" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <div class="product-container">
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1" class="product-image" />
+        <h2 class="product-title">Product 1</h2>
+        <p class="product-description">Description of Product 1</p>
+      </div>
+      <div class="product-card">
+        <img src="product2.jpg" alt="Product 2" class="product-image" />
+        <h2 class="product-title">Product 2</h2>
+        <p class="product-description">Description of Product 2</p>
+      </div>
+      <div class="product-card">
+        <img src="product3.jpg" alt="Product 3" class="product-image" />
+        <h2 class="product-title">Product 3</h2>
+        <p class="product-description">Description of Product 3</p>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Survey Form</p>
+      <a href="https://www.facebook.com/" target="_blank"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="https://twitter.com/" target="_blank"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a href="https://www.instagram.com/" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="https://www.linkedin.com/" target="_blank"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+    </footer>
+  </body>
+</html>
